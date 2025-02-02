@@ -1,7 +1,6 @@
-```markdown
 # Infrastructure as Code (IaC) Project
 
-This repository contains the Infrastructure as Code (IaC) setup for deploying and managing a **Kubernetes cluster** and associated applications. The project is organized into multiple directories, each focusing on a specific tool or technology.
+This repository contains the **Infrastructure as Code (IaC) setup** for deploying and managing a **Kubernetes cluster** and associated applications. The project is structured into multiple directories, each dedicated to a specific tool or technology.
 
 ---
 
