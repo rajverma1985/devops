@@ -1,0 +1,36 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  # Define the Kubernetes master node
+  config.vm.define "k8s-master" do |master|
+    master.vm.box = "ubuntu/jammy64" # Ubuntu 22.04 LTS
+    master.vm.hostname = "k8s-master"
+    master.vm.network "private_network", ip: "192.168.56.10"
+
+    master.vm.provider "virtualbox" do |vb|
+      vb.name = "k8s-master"
+      vb.memory = 2048 # 2GB RAM
+      vb.cpus = 2      # 2 CPU cores
+    end
+
+    master.vm.provision "shell", path: "scripts/master.sh"
+  end
+
+  # Define the Kubernetes worker nodes
+  (1..2).each do |i|
+    config.vm.define "k8s-worker-#{i}" do |worker|
+      worker.vm.box = "ubuntu/jammy64" # Ubuntu 22.04 LTS
+      worker.vm.hostname = "k8s-worker-#{i}"
+      worker.vm.network "private_network", ip: "192.168.56.#{10 + i}"
+
+      worker.vm.provider "virtualbox" do |vb|
+        vb.name = "k8s-worker-#{i}"
+        vb.memory = 2048 # 2GB RAM
+        vb.cpus = 2      # 2 CPU cores
+      end
+
+      worker.vm.provision "shell", path: "scripts/worker.sh"
+    end
+  end
+end
