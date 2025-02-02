@@ -7,7 +7,7 @@ This repository contains the Infrastructure as Code (IaC) setup for deploying an
 
 ## 📂 Project Structure  
 
-```
+```plaintext
 infra-as-code/
 ├── packer/
 │   ├── kubernetes.pkr.hcl
