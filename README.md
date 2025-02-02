@@ -8,46 +8,51 @@ This repository contains the Infrastructure as Code (IaC) setup for deploying an
 
 ## Project Structure
 
+Here is your directory structure formatted in **GitHub Markdown**:  
+
+```plaintext
+# Infrastructure-as-Code (IaC) Repository Structure
+
 ```
-infra-as-code/
-├── packer/
-│   ├── kubernetes.pkr.hcl
-│   └── scripts/
-│       ├── install_docker.sh
-│       └── install_k8s.sh
-├── vagrant/
-│   ├── Vagrantfile
-│   └── scripts/
-│       ├── master.sh
-│       └── worker.sh
-├── terraform/
-│   ├── main.tf
-│   ├── variables.tf
-│   ├── outputs.tf
-│   └── templates/
-│       ├── master.cfg
-│       └── worker.cfg
-├── ansible/
-│   ├── inventory
-│   ├── playbook.yml
-│   └── roles/
-│       ├── kubernetes-master/
-│       └── kubernetes-worker/
-├── kubernetes/
-│   ├── apps/
-│   │   ├── app1/
-│   │   │   └── deployment.yaml
-│   │   └── app2/
-│   ├── monitoring/
-│   └── argocd/
-├── helm/
-│   ├── app1/
-│   │   └── values.yaml
-│   └── app2/
-├── github-actions/
-│   ├── infra-ci.yml
-│   └── app-cd.yml
-└── README.md
+📂 **infra-as-code/**  
+├── 📂 **packer/**  
+│   ├── 📄 kubernetes.pkr.hcl  
+│   └── 📂 **scripts/**  
+│       ├── 📄 install_docker.sh  
+│       └── 📄 install_k8s.sh  
+├── 📂 **vagrant/**  
+│   ├── 📄 Vagrantfile  
+│   └── 📂 **scripts/**  
+│       ├── 📄 master.sh  
+│       └── 📄 worker.sh  
+├── 📂 **terraform/**  
+│   ├── 📄 main.tf  
+│   ├── 📄 variables.tf  
+│   ├── 📄 outputs.tf  
+│   └── 📂 **templates/**  
+│       ├── 📄 master.cfg  
+│       └── 📄 worker.cfg  
+├── 📂 **ansible/**  
+│   ├── 📄 inventory  
+│   ├── 📄 playbook.yml  
+│   └── 📂 **roles/**  
+│       ├── 📂 kubernetes-master/  
+│       └── 📂 kubernetes-worker/  
+├── 📂 **kubernetes/**  
+│   ├── 📂 **apps/**  
+│   │   ├── 📂 app1/  
+│   │   │   └── 📄 deployment.yaml  
+│   │   └── 📂 app2/  
+│   ├── 📂 monitoring/  
+│   └── 📂 argocd/  
+├── 📂 **helm/**  
+│   ├── 📂 app1/  
+│   │   └── 📄 values.yaml  
+│   └── 📂 app2/  
+├── 📂 **github-actions/**  
+│   ├── 📄 infra-ci.yml  
+│   └── 📄 app-cd.yml  
+└── 📄 **README.md**  
 ```
 
 ## Directory Overview
