@@ -8,45 +8,46 @@ This repository contains the **Infrastructure as Code (IaC) setup** for deployin
 
 # INFRA-AS-CODE REPOSITORY STRUCTURE
 
-📂 **INFRA-AS-CODE**  
-├── 📦 **[Packer](https://www.packer.io/)**  
+📂 INFRA-AS-CODE/  
+├── 📦 [![Packer](https://img.shields.io/badge/-Packer-02A8F4?logo=packer&logoColor=white)](https://www.packer.io/)  
 │   ├── 📄 kubernetes.pkr.hcl  
 │   └── 📂 scripts/  
 │       ├── 📜 install_docker.sh  
 │       └── 📜 install_k8s.sh  
-├── 📦 **[Vagrant](https://www.vagrantup.com/)**  
+├── 📦 [![Vagrant](https://img.shields.io/badge/-Vagrant-1563FF?logo=vagrant&logoColor=white)](https://www.vagrantup.com/)  
 │   ├── 📄 Vagrantfile  
 │   └── 📂 scripts/  
 │       ├── 📜 master.sh  
 │       └── 📜 worker.sh  
-├── 🌍 **[Terraform](https://www.terraform.io/)**  
+├── 🌍 [![Terraform](https://img.shields.io/badge/-Terraform-623CE4?logo=terraform&logoColor=white)](https://www.terraform.io/)  
 │   ├── 📄 main.tf  
 │   ├── 📄 variables.tf  
 │   ├── 📄 outputs.tf  
 │   └── 📂 templates/  
 │       ├── 📜 master.cfg  
 │       └── 📜 worker.cfg  
-├── ⚙️ **[Ansible](https://www.ansible.com/)**  
+├── ⚙️ [![Ansible](https://img.shields.io/badge/-Ansible-EE0000?logo=ansible&logoColor=white)](https://www.ansible.com/)  
 │   ├── 📄 inventory  
 │   ├── 📄 playbook.yml  
 │   └── 📂 roles/  
 │       ├── 📂 kubernetes-master/  
 │       └── 📂 kubernetes-worker/  
-├── ☸️ **[Kubernetes](https://kubernetes.io/)**  
+├── ☸️ [![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io/)  
 │   ├── 📂 apps/  
 │   │   ├── 📂 app1/  
 │   │   │   └── 📜 deployment.yaml  
 │   │   └── 📂 app2/  
 │   ├── 📂 monitoring/  
 │   └── 📂 argocd/  
-├── 🚀 **[Helm](https://helm.sh/)**  
+├── 🚀 [![Helm](https://img.shields.io/badge/-Helm-0F1689?logo=helm&logoColor=white)](https://helm.sh/)  
 │   ├── 📂 app1/  
 │   │   └── 📜 values.yaml  
 │   └── 📂 app2/  
-├── 🤖 **[GitHub Actions](https://github.com/features/actions)**  
+├── 🤖 [![GitHub Actions](https://img.shields.io/badge/-GitHub_Actions-2088FF?logo=github-actions&logoColor=white)](https://github.com/features/actions)  
 │   ├── 📄 infra-ci.yml  
 │   └── 📄 app-cd.yml  
-└── 📘 **README.md**
+└── 📘 readme.md  
+
 
 ---
 
