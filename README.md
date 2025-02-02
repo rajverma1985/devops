@@ -158,7 +158,7 @@ Contributions are welcome! Please follow the [Contribution Guidelines](CONTRIBUT
 ## 📜 License  
 
 This project is licensed under the **[MIT License](LICENSE)**.
-```
+
 
 ---
 
@@ -170,3 +170,5 @@ This project is licensed under the **[MIT License](LICENSE)**.
 ✔ **Enhanced readability with emojis & bold sections**.  
 
 🚀 Feel free to open issues for feedback and suggestions! 🎯
+
+```
