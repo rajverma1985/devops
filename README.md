@@ -170,5 +170,4 @@ This project is licensed under the **[MIT License](LICENSE)**.
 ✔ **Enhanced readability with emojis & bold sections**.  
 
 🚀 Feel free to open issues for feedback and suggestions! 🎯
-
-```
+---
