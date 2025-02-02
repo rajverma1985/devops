@@ -1,0 +1,25 @@
+i#cloud-config
+autoinstall:
+  version: 1
+  identity:
+    hostname: kubernetes-node
+    password: "$6$rounds=4096$salt$hashed_password" # Replace with a hashed password
+    username: ubuntu
+  ssh:
+    install-server: true
+    allow-pw: true
+  storage:
+    layout:
+      name: lvm
+  packages:
+    - docker.io
+    - curl
+    - apt-transport-https
+    - ca-certificates
+    - software-properties-common
+  late-commands:
+    - curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+    - echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    - sudo apt-get update
+    - sudo apt-get install -y kubelet kubeadm kubectl
+    - sudo apt-mark hold kubelet kubeadm kubectl
