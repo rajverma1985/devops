@@ -52,6 +52,22 @@ source "proxmox-iso" "kubernetes" {
     iso_checksum     = "sha256:5f338e1a6b1abf5f15a9a0f6a5f5a5f5a5f5a5f5a5f5a5f5a5f5a5f5a5f5a5f" # Replace with the actual checksum
     iso_storage_pool = "local" # Storage pool where the ISO is located
   }
+  
+  # Boot command for automated installation
+  boot_command = [
+        "<wait3s>c<wait3s>",
+        "linux /casper/vmlinuz --- ",
+        # <client-ip>:<server-ip>:<gw-ip>:<netmask>:<hostname>:<device>:<autoconf>:<dns0-ip>:<dns1-ip>:<ntp0-ip>:...
+        "ip=::::::dhcp::: ",    # autoconf=dhcp - this is the line I had to add to get DHCP working
+        # IP of Windows PC with port mapped to WSL2
+        "autoinstall 'ds=nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/'",    # even got it working with WSL2!
+        "<enter><wait>",
+        "initrd /casper/initrd",
+        "<enter><wait>",
+        "boot",
+        "<enter>"
+    ]
+  boot_key_interval = "150ms"
 
   # VM hardware configuration
   memory           = 4096 # RAM in MB
