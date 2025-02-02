@@ -6,7 +6,7 @@ This repository contains the **Infrastructure as Code (IaC) setup** for deployin
 
 ## 📂 Project Structure
 
-📂 **infra-as-code/**  
+📂 **INFRA-AS-CODE/**  
 ├── 📦 **[![Packer](https://img.shields.io/badge/-Packer-02A8F4?logo=packer&logoColor=white)](https://www.packer.io/)**  
 │   ├── 📄 kubernetes.pkr.hcl  
 │   └── 📂 **scripts/**  
@@ -44,8 +44,7 @@ This repository contains the **Infrastructure as Code (IaC) setup** for deployin
 ├── 🤖 **[![GitHub Actions](https://img.shields.io/badge/-GitHub_Actions-2088FF?logo=github-actions&logoColor=white)](https://github.com/features/actions)**  
 │   ├── 📄 infra-ci.yml  
 │   └── 📄 app-cd.yml  
-└── 📘 **README.md**  
-
+└── 📘 **readme.md**  
 
 ---
 
