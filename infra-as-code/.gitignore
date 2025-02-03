@@ -1,0 +1,8 @@
+credentials.pkr.hcl
+# Ignore local development files
+**/.vscode
+**/.DS_Store
+
+# Docker Secrets, Environment Files
+**/secret.*
+**/.env
